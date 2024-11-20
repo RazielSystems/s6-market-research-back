@@ -1,15 +1,28 @@
 {
-  "name": "EstudioDeMercado_API",
+  "name": "estudio-de-mercado-api",
   "version": "1.0.0",
   "main": "index.js",
+  "author": "Benito Perdomo <benito.perdomo.v@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "debug": "DEBUG=app:* ts-node-dev src/server.ts",
+    "start1": "ts-node-dev src/server.ts",
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "lint": "eslint . --ext .ts",
+    "clean": "rm -rf dist"
+  },
   "dependencies": {
     "cors": "^2.8.5",
+    "debug": "^4.3.7",
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
     "mongoose": "^8.8.2"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/debug": "^4.1.12",
     "@types/express": "^5.0.0",
     "@types/node": "^22.9.1",
     "ts-node-dev": "^2.0.0",
